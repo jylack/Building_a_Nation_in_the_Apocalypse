@@ -4,10 +4,11 @@ public class GroundCreate : MonoBehaviour
 {
     public GameObject box;
     public Vector3 createPos;
+
     [SerializeField]
     int mapSize = 12;
-    float boxWid = 2f;//오브젝트 박스 길이 만큼 떨구기용
-    // Start is called before the first frame update
+    float boxWidth = 2f;//오브젝트 박스 길이 만큼 떨구기용
+    
     void Start()
     {
         
@@ -15,12 +16,12 @@ public class GroundCreate : MonoBehaviour
         {
             for (int j = 0; j < mapSize; j++)
             {
-                Instantiate(box, new Vector3(createPos.x + (i * boxWid), 0, createPos.z + (j * boxWid)), box.transform.rotation);
+                Instantiate(box, new Vector3(createPos.x + (i * boxWidth), 0, createPos.z + (j * boxWidth)), box.transform.rotation,transform);
             }
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 

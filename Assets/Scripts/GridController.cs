@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GridController : MonoBehaviour
 {
+
 
     private Color originalColor;
     public Color hoverColor = Color.red;
@@ -23,3 +24,4 @@ public class GameManager : MonoBehaviour
         GetComponent<Renderer>().material.color = originalColor;
     }
 }
+
